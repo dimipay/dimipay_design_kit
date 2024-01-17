@@ -1,7 +1,9 @@
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names
+
 library dimipay_design_kit;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'utils/dimipay_colors.dart';
+export 'utils/dimipay_typography.dart';
+
+// export 'widgets/dimipay_text.dart';
+// export 'widgets/dimipay_button.dart';
