@@ -1,39 +1,96 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## **THIS IS AN ALPHA-VERSION PACKAGE**
+## **PLEASE USE WITH CAREFUL CHOICE**
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# Dimipay Design Kit
+Copyright (C) Dimipay Frontend Engineering Team & Dimipay Design Team - All Rights Reserved
+### Deisigned By
+조현우, 박지윤 in Dimipay Design Team
+### Created By
+김형석, 서승표, 오민용, 장인화 in Dimipay Frontend Engineering Team
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+# Features
+## Colors
+represents colors used in dimipay v2
+### grayscale
++ 100
++ 200
++ 300
++ 400
++ 500
++ 600
++ 700
++ 800
++ 900
++ 100
+### primary
++ brand
++ negative
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+## Typography
+represents fonts used in dimipay v2
+### title
 ```dart
-const like = 'sample';
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.title());
+```
+### header1
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.header1());
+```
+### header2
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.header2());
+```
+### item - title
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.itemTitle());
+```
+### item - description
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.itemDescription());
+```
+### description
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.description());
+```
+### readable
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.readable());
+```
+### token
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.token());
+```
+### hint
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.hint());
+```
+### paragraph1
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.paragraph1());
+```
+### paragraph2
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.paragraph2());
+```
+### paragraph1 - underlined
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.paragraph1Underlined());
+```
+### paragraph2 - underlined
+```dart
+import package:dimipay_design_kit/dimipay_design_kit.dart;
+final text = Text("Hello Dimigo Students!", style: DPTypography.paragraph2Underlined());
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
