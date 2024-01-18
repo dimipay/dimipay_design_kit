@@ -2,6 +2,7 @@
 
 library dimipay_design_kit;
 
+export 'widgets/dimipay_icons.dart';
 export 'utils/dimipay_colors.dart';
 export 'utils/dimipay_typography.dart';
 
