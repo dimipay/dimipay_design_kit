@@ -1,3 +1,6 @@
 ## 0.0.1
+* Color schema added
+* Typography added
 
-* TODO: Describe initial release.
+## 0.0.2
+* Icon style added
