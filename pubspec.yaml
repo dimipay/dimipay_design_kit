@@ -1,6 +1,6 @@
 name: dimipay_design_kit
 description: "A design kit for Dimipay. Current version is in Alpha, and used in dimipay v2 application."
-version: 0.0.2
+version: 0.0.3
 homepage:
 
 environment:
@@ -20,23 +20,23 @@ repository: https://github.com/dimipay/dimipay_design_kit.git
 
 flutter:
   fonts:
-    - family: SUIT
+    - family: SUITv1
       fonts:
-        - asset: assets/fonts/SUIT-Thin.ttf
+        - asset: assets/fonts/SUITv1-Thin.ttf
           weight: 100
-        - asset: assets/fonts/SUIT-ExtraLight.ttf
+        - asset: assets/fonts/SUITv1-ExtraLight.ttf
           weight: 200
-        - asset: assets/fonts/SUIT-Light.ttf
+        - asset: assets/fonts/SUITv1-Light.ttf
           weight: 300
-        - asset: assets/fonts/SUIT-Regular.ttf
+        - asset: assets/fonts/SUITv1-Regular.ttf
           weight: 400
-        - asset: assets/fonts/SUIT-Medium.ttf
+        - asset: assets/fonts/SUITv1-Medium.ttf
           weight: 500
-        - asset: assets/fonts/SUIT-SemiBold.ttf
+        - asset: assets/fonts/SUITv1-SemiBold.ttf
           weight: 600
-        - asset: assets/fonts/SUIT-Bold.ttf
+        - asset: assets/fonts/SUITv1-Bold.ttf
           weight: 700
-        - asset: assets/fonts/SUIT-ExtraBold.ttf
+        - asset: assets/fonts/SUITv1-ExtraBold.ttf
           weight: 800
-        - asset: assets/fonts/SUIT-Heavy.ttf
+        - asset: assets/fonts/SUITv1-Heavy.ttf
           weight: 900
