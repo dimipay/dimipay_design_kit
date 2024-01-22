@@ -9,3 +9,6 @@
 * POS Typography added
 * Updated license to MIT
 * Changed font from SUIT to SUITv1
+
+## 0.0.4
+* Deleted unused assets
