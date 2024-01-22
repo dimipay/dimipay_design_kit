@@ -12,3 +12,12 @@
 
 ## 0.0.4
 * Deleted unused assets
+
+## 0.0.5
+* Hot fixed pubsepc in error of linking fonts
+
+## 0.0.6
+* Hot fixed pubsepc in error of linking fonts
+
+## 0.0.7
+* Hot fixed font name...in 2AM
