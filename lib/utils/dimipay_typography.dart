@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:dimipay_design_kit/dimipay_design_kit.dart';
 
-TextStyle _style(FontWeight weight, double size, double? height, Color color,
+TextStyle _style(FontWeight weight, double size, double height, Color color,
         {bool underlined = false, double spacing = 0}) =>
     TextStyle(
       color: color,
-      height: height != null ? height / size : null,
+      height: height / size,
       fontSize: size,
       fontFamily: 'SUITv1',
       fontWeight: weight,
@@ -31,16 +31,16 @@ class _SUITv1 {
 
 class _POS {
   TextStyle itemTitle({Color color = _defaultColor}) =>
-      _style(_weight.semiBold, 24, null, color);
+      _style(_weight.semiBold, 24, 0, color);
 
   TextStyle itemDescription({Color color = _defaultColor}) =>
-      _style(_weight.medium, 24, null, color);
+      _style(_weight.medium, 24, 0, color);
 
   TextStyle title({Color color = _defaultColor}) =>
-      _style(_weight.semiBold, 36, null, color, spacing: -0.72);
+      _style(_weight.semiBold, 36, 0, color, spacing: -0.72);
 
   TextStyle underlined({Color color = _defaultColor}) =>
-      _style(_weight.regular, 24, null, color, underlined: true);
+      _style(_weight.regular, 24, 0, color, underlined: true);
 }
 
 abstract class DPTypography {

@@ -21,3 +21,14 @@
 
 ## 0.0.7
 * Hot fixed font name...in 2AM
+
+## 0.0.8
+* Updated pos fonts
+
+## 0.0.9
+* Added bar of app & pos (posbar is not ready)
+* Added button
+* Added divider
+* Added payment selection
+* Added default card image
+* Code written & Supported by sspzoa.io

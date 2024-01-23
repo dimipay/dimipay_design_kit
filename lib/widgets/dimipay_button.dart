@@ -1,42 +1,34 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class DPButton extends StatelessWidget {
-//   final String text;
-//   final TextStyle style;
-//   final TextAlign textAlign;
-//   final TextOverflow overflow;
-//   final int maxLines;
-//   final bool softWrap;
+class DPButton extends StatelessWidget {
+  final VoidCallback onTap;
+  final BorderRadius radius;
+  final Decoration decoration;
+  final Widget child;
+  final bool isTapEffectEnabled;
 
-//   const DPButton(
-//     this.text, {
-//     Key key,
-//     this.style,
-//     this.textAlign,
-//     this.overflow,
-//     this.maxLines,
-//     this.softWrap,
-//   }) : super(key: key);
+  const DPButton({
+    super.key,
+    required this.onTap,
+    this.radius = const BorderRadius.all(Radius.zero),
+    this.decoration = const BoxDecoration(),
+    required this.child,
+    this.isTapEffectEnabled = true,
+  });
 
-//     const DPButton.title(
-//     this.text, {
-//     Key key,
-//     this.style,
-//     this.textAlign,
-//     this.overflow,
-//     this.maxLines,
-//     this.softWrap,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Text(
-//       text,
-//       textAlign: textAlign,
-//       overflow: overflow,
-//       maxLines: maxLines,
-//       softWrap: softWrap,
-//       style: style,
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+        color: Colors.transparent,
+        child: isTapEffectEnabled
+            ? InkWell(
+                onTap: onTap,
+                borderRadius: radius,
+                child: Ink(decoration: decoration, child: child))
+            : GestureDetector(
+                onTap: onTap,
+                child: Material(
+                    color: Colors.transparent,
+                    child: Container(decoration: decoration, child: child))));
+  }
+}
