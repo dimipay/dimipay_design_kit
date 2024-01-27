@@ -1,6 +1,6 @@
 name: dimipay_design_kit
 description: "A design kit for Dimipay. Current version is in Alpha, and used in dimipay v2 application & dimipay pos."
-version: 0.0.10
+version: 0.1.1
 homepage: https://dimipay.io
 
 environment:

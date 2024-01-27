@@ -32,3 +32,7 @@
 * Added payment selection
 * Added default card image
 * Code written & Supported by sspzoa.io
+
+## 0.1.1
+* fix DPTypography.readable fontsize
+* remove getx dependency
