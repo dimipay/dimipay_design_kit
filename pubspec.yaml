@@ -1,6 +1,6 @@
 name: dimipay_design_kit
 description: "A design kit for Dimipay. Current version is in Alpha, and used in dimipay v2 application & dimipay pos."
-version: 0.0.9
+version: 0.0.10
 homepage: https://dimipay.io
 
 environment:
@@ -11,7 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.9
-  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
