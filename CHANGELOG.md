@@ -36,3 +36,6 @@
 ## 0.1.1
 * fix DPTypography.readable fontsize
 * remove getx dependency
+
+## 0.1.2
+* Modified DPAppBar
