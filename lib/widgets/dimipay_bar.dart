@@ -1,11 +1,12 @@
 import 'package:dimipay_design_kit/dimipay_design_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DPAppbar extends StatelessWidget {
-  final String header;
+  final String? header;
   final String? paragraph;
 
-  const DPAppbar({super.key, required this.header, this.paragraph});
+  const DPAppbar({super.key, this.header, this.paragraph});
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +15,22 @@ class DPAppbar extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           DPButton(
-              onTap: () {},
+              onTap: () => Get.back(),
               radius: BorderRadius.circular(20),
               isTapEffectEnabled: false,
               child: const DPIcons(Icons.arrow_back_ios_rounded, size: 20)),
-          const SizedBox(height: 16),
-          Text(header,
-              style: DPTypography.header1(color: DPColors.grayscale1000)),
-          const SizedBox(height: 16),
+          if (header != null)
+            Column(children: [
+              const SizedBox(height: 16),
+              Text(header!,
+                  style: DPTypography.header1(color: DPColors.grayscale1000))
+            ]),
           if (paragraph != null)
-            Text(paragraph!,
-                style: DPTypography.paragraph1(color: DPColors.grayscale700))
+            Column(children: [
+              const SizedBox(height: 16),
+              Text(paragraph!,
+                  style: DPTypography.paragraph1(color: DPColors.grayscale700))
+            ])
         ]));
   }
 }
