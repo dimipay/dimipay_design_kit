@@ -14,23 +14,9 @@ class DPAppbar extends StatelessWidget {
         width: double.infinity,
         padding: const EdgeInsets.all(20),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          DPButton(
-              onTap: () => Get.back(),
-              radius: BorderRadius.circular(20),
-              isTapEffectEnabled: false,
-              child: const DPIcons(Icons.arrow_back_ios_rounded, size: 20)),
-          if (header != null)
-            Column(children: [
-              const SizedBox(height: 16),
-              Text(header!,
-                  style: DPTypography.header1(color: DPColors.grayscale1000))
-            ]),
-          if (paragraph != null)
-            Column(children: [
-              const SizedBox(height: 16),
-              Text(paragraph!,
-                  style: DPTypography.paragraph1(color: DPColors.grayscale700))
-            ])
+          DPButton(onTap: () => Get.back(), radius: BorderRadius.circular(20), isTapEffectEnabled: false, child: const DPIcons(Icons.arrow_back_ios_rounded, size: 20)),
+          if (header != null) Column(children: [const SizedBox(height: 16), Text(header!, style: DPTypography.header1(color: IDPColors.grayscale1000))]),
+          if (paragraph != null) Column(children: [const SizedBox(height: 16), Text(paragraph!, style: DPTypography.paragraph1(color: IDPColors.grayscale700))])
         ]));
   }
 }
@@ -43,22 +29,6 @@ class DPPosbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: double.infinity,
-        padding: const EdgeInsets.all(20),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          DPButton(
-              onTap: () {},
-              radius: BorderRadius.circular(20),
-              isTapEffectEnabled: false,
-              child: const DPIcons(Icons.arrow_back_ios_rounded, size: 20)),
-          const SizedBox(height: 16),
-          Text(header,
-              style: DPTypography.header1(color: DPColors.grayscale1000)),
-          const SizedBox(height: 16),
-          if (paragraph != null)
-            Text(paragraph!,
-                style: DPTypography.paragraph1(color: DPColors.grayscale700))
-        ]));
+    return Container(width: double.infinity, padding: const EdgeInsets.all(20), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [DPButton(onTap: () {}, radius: BorderRadius.circular(20), isTapEffectEnabled: false, child: const DPIcons(Icons.arrow_back_ios_rounded, size: 20)), const SizedBox(height: 16), Text(header, style: DPTypography.header1(color: IDPColors.grayscale1000)), const SizedBox(height: 16), if (paragraph != null) Text(paragraph!, style: DPTypography.paragraph1(color: IDPColors.grayscale700))]));
   }
 }

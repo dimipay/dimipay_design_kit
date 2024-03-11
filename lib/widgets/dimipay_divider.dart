@@ -1,4 +1,4 @@
-import 'package:dimipay_design_kit/utils/dimipay_colors.dart';
+import 'package:dimipay_design_kit/interfaces/dimipay_colors.dart';
 import 'package:flutter/material.dart';
 
 class DPDivider extends StatelessWidget {
@@ -6,9 +6,6 @@ class DPDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: double.infinity,
-        height: 6,
-        decoration: const BoxDecoration(color: DPColors.grayscale200));
+    return Container(width: double.infinity, height: 6, decoration: const BoxDecoration(color: IDPColors.grayscale200));
   }
 }

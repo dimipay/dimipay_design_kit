@@ -20,7 +20,7 @@ class _PaymentSelectionState extends State<PaymentSelection> {
       width: double.infinity,
       margin: const EdgeInsets.fromLTRB(16, 0, 16, 42),
       decoration: BoxDecoration(
-        color: DPColors.grayscale100,
+        color: IDPColors.grayscale100,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -83,7 +83,7 @@ class _TopIndicator extends StatelessWidget {
         width: 36,
         height: 4,
         decoration: BoxDecoration(
-          color: DPColors.grayscale300,
+          color: IDPColors.grayscale300,
           borderRadius: BorderRadius.circular(10),
         ),
       ),
@@ -102,8 +102,7 @@ class _Heading extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Text(text,
-            style: DPTypography.header2(color: DPColors.grayscale1000)),
+        child: Text(text, style: DPTypography.header2(color: IDPColors.grayscale1000)),
       ),
     );
   }
@@ -141,14 +140,13 @@ class _PaymentOptionState extends State<_PaymentOption> {
             SvgPicture.asset(widget.assetPath, height: 40),
             const SizedBox(width: 12),
             Expanded(
-              child:
-                  _CardDetail(title: widget.title, subtitle: widget.subtitle),
+              child: _CardDetail(title: widget.title, subtitle: widget.subtitle),
             ),
             const SizedBox(width: 12),
             if (widget.isSelected)
               const Icon(
                 Icons.check_rounded,
-                color: DPColors.primaryBrand,
+                color: IDPColors.primaryBrand,
                 size: 24,
               ),
           ],
@@ -169,11 +167,9 @@ class _CardDetail extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title,
-            style: DPTypography.itemTitle(color: DPColors.grayscale800)),
+        Text(title, style: DPTypography.itemTitle(color: IDPColors.grayscale800)),
         const SizedBox(height: 4),
-        Text(subtitle,
-            style: DPTypography.itemDescription(color: DPColors.grayscale600)),
+        Text(subtitle, style: DPTypography.itemDescription(color: IDPColors.grayscale600)),
       ],
     );
   }
@@ -191,15 +187,13 @@ class _AddCardButton extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: DPColors.grayscale200,
+              color: IDPColors.grayscale200,
               borderRadius: BorderRadius.circular(50),
             ),
-            child: const Icon(Icons.credit_card,
-                size: 24, color: DPColors.grayscale600),
+            child: const Icon(Icons.credit_card, size: 24, color: IDPColors.grayscale600),
           ),
           const SizedBox(width: 12),
-          Text('카드 추가하기',
-              style: DPTypography.description(color: DPColors.grayscale600)),
+          Text('카드 추가하기', style: DPTypography.description(color: IDPColors.grayscale600)),
         ],
       ),
     );
