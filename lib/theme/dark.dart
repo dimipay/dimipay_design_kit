@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 class DPDarkThemeColors implements IDPColors {
   @override
-  Color grayscale100 = const Color(0xFF1C1F1F);
+  Color grayscale100 = const Color(0xFF222525);
   @override
-  Color grayscale200 = const Color(0xFF222525);
+  Color grayscale200 = const Color(0xFF1C1F1F);
   @override
   Color grayscale300 = const Color(0xFF2C3030);
   @override
