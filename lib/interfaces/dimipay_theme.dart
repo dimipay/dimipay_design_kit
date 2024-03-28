@@ -3,6 +3,6 @@ import 'package:dimipay_design_kit/interfaces/dimipay_typography.dart';
 
 class DPTheme {
   final DPColors colors;
-  final IDPTypography textStyle;
+  final DPTypography textStyle;
   DPTheme({required this.colors, required this.textStyle});
 }

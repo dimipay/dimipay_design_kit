@@ -23,75 +23,119 @@ abstract class Weight {
   static const heavy = FontWeight.w900;
 }
 
-abstract interface class IDPTypography {
-  TextStyle title({Color color});
-
-  TextStyle header1({Color color});
-
-  TextStyle header2({Color color});
-
-  TextStyle itemTitle({Color color});
-
-  TextStyle itemDescription({Color color});
-
-  TextStyle description({Color color});
-
-  TextStyle readable({Color color});
-
-  TextStyle token({Color color});
-
-  TextStyle hint({Color color});
-
-  TextStyle paragraph1({Color color});
-
-  TextStyle paragraph2({Color color});
-
-  TextStyle paragraph1Underlined({Color color});
-
-  TextStyle paragraph2Underlined({Color color});
-}
-
-class DPTypography implements IDPTypography {
+class DPTypography extends ThemeExtension<DPTypography> {
   final Color defaultColor;
 
-  DPTypography(this.defaultColor);
+  DPTypography({
+    required this.defaultColor,
+    TextStyle? title,
+    TextStyle? header1,
+    TextStyle? header2,
+    TextStyle? itemTitle,
+    TextStyle? itemDescription,
+    TextStyle? description,
+    TextStyle? readable,
+    TextStyle? token,
+    TextStyle? hint,
+    TextStyle? paragraph1,
+    TextStyle? paragraph2,
+    TextStyle? paragraph1Underlined,
+    TextStyle? paragraph2Underlined,
+  })  : title = title ?? style(Weight.semiBold, 28, 36, defaultColor),
+        header1 = header1 ?? style(Weight.bold, 24, 32, defaultColor),
+        header2 = header2 ?? style(Weight.semiBold, 20, 26, defaultColor),
+        itemTitle = itemTitle ?? style(Weight.semiBold, 16, 22, defaultColor),
+        itemDescription = itemDescription ?? style(Weight.medium, 14, 20, defaultColor),
+        description = description ?? style(Weight.semiBold, 16, 22, defaultColor),
+        readable = readable ?? style(Weight.semiBold, 14, 20, defaultColor),
+        token = token ?? style(Weight.regular, 12, 18, defaultColor),
+        hint = hint ?? style(Weight.regular, 10, 16, defaultColor),
+        paragraph1 = paragraph1 ?? style(Weight.regular, 16, 16 * 1.6, defaultColor),
+        paragraph2 = paragraph2 ?? style(Weight.regular, 14, 14 * 1.6, defaultColor),
+        paragraph1Underlined = paragraph1Underlined ?? style(Weight.regular, 16, 16 * 1.6, underlined: true, defaultColor),
+        paragraph2Underlined = paragraph2Underlined ?? style(Weight.regular, 14, 14 * 1.6, underlined: true, defaultColor);
+
+  final TextStyle title;
+
+  final TextStyle header1;
+
+  final TextStyle header2;
+
+  final TextStyle itemTitle;
+
+  final TextStyle itemDescription;
+
+  final TextStyle description;
+
+  final TextStyle readable;
+
+  final TextStyle token;
+
+  final TextStyle hint;
+
+  final TextStyle paragraph1;
+
+  final TextStyle paragraph2;
+
+  final TextStyle paragraph1Underlined;
+
+  final TextStyle paragraph2Underlined;
 
   @override
-  TextStyle title({Color? color}) => style(Weight.semiBold, 28, 36, color ?? defaultColor);
+  ThemeExtension<DPTypography> copyWith({
+    Color? defaultColor,
+    TextStyle? title,
+    TextStyle? header1,
+    TextStyle? header2,
+    TextStyle? itemTitle,
+    TextStyle? itemDescription,
+    TextStyle? description,
+    TextStyle? readable,
+    TextStyle? token,
+    TextStyle? hint,
+    TextStyle? paragraph1,
+    TextStyle? paragraph2,
+    TextStyle? paragraph1Underlined,
+    TextStyle? paragraph2Underlined,
+  }) {
+    return DPTypography(
+      defaultColor: defaultColor ?? this.defaultColor,
+      title: title ?? this.title,
+      header1: header1 ?? this.header1,
+      header2: header2 ?? this.header2,
+      itemTitle: itemTitle ?? this.itemTitle,
+      itemDescription: itemDescription ?? this.itemDescription,
+      description: description ?? this.description,
+      readable: readable ?? this.readable,
+      token: token ?? this.token,
+      hint: hint ?? this.hint,
+      paragraph1: paragraph1 ?? this.paragraph1,
+      paragraph2: paragraph2 ?? this.paragraph2,
+      paragraph1Underlined: paragraph1Underlined ?? this.paragraph1Underlined,
+      paragraph2Underlined: paragraph2Underlined ?? this.paragraph2Underlined,
+    );
+  }
 
   @override
-  TextStyle header1({Color? color}) => style(Weight.bold, 24, 32, color ?? defaultColor);
-
-  @override
-  TextStyle header2({Color? color}) => style(Weight.semiBold, 20, 26, color ?? defaultColor);
-
-  @override
-  TextStyle itemTitle({Color? color}) => style(Weight.semiBold, 16, 22, color ?? defaultColor);
-
-  @override
-  TextStyle itemDescription({Color? color}) => style(Weight.medium, 14, 20, color ?? defaultColor);
-
-  @override
-  TextStyle description({Color? color}) => style(Weight.semiBold, 16, 22, color ?? defaultColor);
-
-  @override
-  TextStyle readable({Color? color}) => style(Weight.semiBold, 14, 20, color ?? defaultColor);
-
-  @override
-  TextStyle token({Color? color}) => style(Weight.regular, 12, 18, color ?? defaultColor);
-
-  @override
-  TextStyle hint({Color? color}) => style(Weight.regular, 10, 16, color ?? defaultColor);
-
-  @override
-  TextStyle paragraph1({Color? color}) => style(Weight.regular, 16, 16 * 1.6, color ?? defaultColor);
-
-  @override
-  TextStyle paragraph2({Color? color}) => style(Weight.regular, 14, 14 * 1.6, color ?? defaultColor);
-
-  @override
-  TextStyle paragraph1Underlined({Color? color}) => style(Weight.regular, 16, 16 * 1.6, underlined: true, color ?? defaultColor);
-
-  @override
-  TextStyle paragraph2Underlined({Color? color}) => style(Weight.regular, 14, 14 * 1.6, underlined: true, color ?? defaultColor);
+  ThemeExtension<DPTypography> lerp(covariant ThemeExtension<DPTypography>? other, double t) {
+    if (other is! DPTypography) {
+      return this;
+    }
+    return DPTypography(
+      defaultColor: Color.lerp(defaultColor, other.defaultColor, t)!,
+      title: TextStyle.lerp(title, other.title, t),
+      header1: TextStyle.lerp(header1, other.header1, t),
+      header2: TextStyle.lerp(header2, other.header2, t),
+      itemTitle: TextStyle.lerp(itemTitle, other.itemTitle, t),
+      itemDescription: TextStyle.lerp(itemDescription, other.itemDescription, t),
+      description: TextStyle.lerp(description, other.description, t),
+      readable: TextStyle.lerp(readable, other.readable, t),
+      token: TextStyle.lerp(token, other.token, t),
+      hint: TextStyle.lerp(hint, other.hint, t),
+      paragraph1: TextStyle.lerp(paragraph1, other.paragraph1, t),
+      paragraph2: TextStyle.lerp(paragraph2, other.paragraph2, t),
+      paragraph1Underlined: TextStyle.lerp(paragraph1Underlined, other.paragraph1Underlined, t),
+      paragraph2Underlined: TextStyle.lerp(paragraph2Underlined, other.paragraph2Underlined, t),
+    );
+  }
 }

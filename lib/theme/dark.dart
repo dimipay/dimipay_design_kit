@@ -22,7 +22,7 @@ class DPDarkThemeColors extends DPColors {
 }
 
 class DPDarkThemeTypography extends DPTypography {
-  DPDarkThemeTypography() : super(DPDarkThemeColors().grayscale700);
+  DPDarkThemeTypography() : super(defaultColor: DPDarkThemeColors().grayscale700);
 }
 
 class DPDarkTheme extends DPTheme {

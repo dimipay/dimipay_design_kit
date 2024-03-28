@@ -22,7 +22,7 @@ class DPLightThemeColors extends DPColors {
 }
 
 class DPLightThemeTypography extends DPTypography {
-  DPLightThemeTypography() : super(DPLightThemeColors().grayscale700);
+  DPLightThemeTypography() : super(defaultColor: DPLightThemeColors().grayscale700);
 }
 
 class DPLightTheme extends DPTheme {
