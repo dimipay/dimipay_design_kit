@@ -5,12 +5,6 @@
 > [!NOTE]
 > 이 패키지는 Alpha 버전입니다. 사용 전 변경사항과 앱·키오스크의 호환성을 확인해주세요.
 
-## Docs
-
-- App: <https://github.com/dimipay/dimipay_app_v2>
-- Kiosk: <https://github.com/dimipay/dimipay_kiosk>
-- Backend: <https://github.com/dimipay/dimipay-back-v2>
-
 ## Flutter & Theme
 
 Flutter의 `ThemeExtension`으로 공통 색상과 타이포그래피를 정의합니다. `DPTheme`은 색상(`colors`)과 타이포그래피(`textStyle`)를 묶어 제공합니다.
