@@ -93,15 +93,3 @@ final background = theme.colors.grayscale100;
 | Script | Description |
 | --- | --- |
 | `flutter test` | 전체 테스트를 실행합니다. |
-
-## Credits
-
-Copyright (C) Dimipay Frontend Engineering Team & Dimipay Design Team - All Rights Reserved
-
-### Designed By
-
-조현우, 박지윤 in Dimipay Design Team
-
-### Created By
-
-김형석, 서승표, 오민용, 장인화 in Dimipay Frontend Engineering Team
